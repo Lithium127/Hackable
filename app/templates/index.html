@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% from 'components/modals.html' import auto_modal %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+    <h1>Welcome to Hackable!</h1>
+    <hr>
+    <!-- ON FIRST LOGIN -->
+    {% call auto_modal("Welcome!") %}
+        <h2>Welcome to Hackable!</h2>
+        <p>If you're looking for a way to start your experience here then follow this link to start the tutorial</p>
+    {% endcall %}
+{% endblock %}

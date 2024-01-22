@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    {% assets "css_all" %}
+        <link href="{{ ASSET_URL }}" rel="stylesheet">
+    {% endassets %}
+    {% assets "js_all" %}
+        <script src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <title>Hackable | {% block title %}Page{% endblock %}</title>
+</head>
+<body>
+    <div>
+        {% block navigation %}
+            {% include 'assets/menu.html' %}
+        {% endblock %}
+        <div class="container bg-body-secondary">
+            {% block body %}
+
+            {% endblock %}
+        </div>
+    </div>
+</body>
+<footer>
+
+</footer>
+
+</html>
